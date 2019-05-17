@@ -1,0 +1,28 @@
+.Navbar {
+    background-color: pink;
+    height: 15vh;
+}
+
+.nav-link {
+    padding: 5px !important;
+}
+
+.NavbarBrand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.Hamburger {
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.Hamburger:hover {
+    cursor: pointer;
+}
+
+.SocialIcon {
+    max-width: 30px;
+    max-height: 30px;
+}
