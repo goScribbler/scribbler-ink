@@ -1,0 +1,21 @@
+.BlogPostSmall {
+    background-color: white;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+
+.BlogPostSmallImage {
+    width: 115px;
+    height: 100px;
+}
+
+.BlogPostSmallTitleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.BlogPostSmallTitle {
+    font-family: 'Suranna', serif;
+    font-size: 2.25rem;
+}

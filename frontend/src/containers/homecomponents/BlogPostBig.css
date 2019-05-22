@@ -1,0 +1,45 @@
+.BlogPostBig {
+    background-color: white;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+
+.BlogPostBigDate {
+    font-family: 'Lato', sans-serif;
+    color: #ff6a00;
+    font-size: .7rem;
+    padding: 5px 0;
+}
+
+.BlogPostBigImage {
+    width: 100%;
+    height: 250px;
+}
+
+.BlogPostBigTitle {
+    font-family: 'Suranna', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    height: 60px;
+}
+
+.BlogPostBigPreview {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    min-height: 75px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.BlogPostBigLink {
+    text-align: center;
+}
+
+.BlogPostBigLink a {
+    color: #ff6a00;
+    font-family: 'Lato', sans-serif;
+}
+
+.BlogPostBigLink a:hover {
+    color: #f8a971;
+}

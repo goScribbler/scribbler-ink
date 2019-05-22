@@ -1,0 +1,24 @@
+.BlogPostMd {
+    background-color: white;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+
+.BlogPostMdDate {
+    font-family: 'Lato', sans-serif;
+    color: #ff6a00;
+    font-size: .7rem;
+    padding: 5px 0;
+}
+
+.BlogPostMdImage {
+    width: 100%;
+    height: 250px;
+}
+
+.BlogPostMdTitle {
+    font-family: 'Suranna', serif;
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 15px;
+}

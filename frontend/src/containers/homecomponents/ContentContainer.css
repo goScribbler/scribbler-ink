@@ -1,0 +1,9 @@
+.ContentContainer {
+    background-color: #f9f9f8;
+    padding: 10vh;
+}
+
+.BlogPostsButtons {
+    display: flex;
+    justify-content: center;
+}
