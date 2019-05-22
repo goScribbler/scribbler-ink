@@ -1,11 +1,12 @@
 .NavCollapse {
     width: 30vw !important;
-    background-color: violet;
+    background-color: #f9f9f8;
     position: absolute;
     left: -30vw;
     top: 0;
     -webkit-animation: slide 0.5s forwards;
     animation: slide 0.5s forwards;
+    z-index: 1;
 }
 
 @-webkit-keyframes slide {

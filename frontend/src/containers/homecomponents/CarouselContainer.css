@@ -1,20 +1,44 @@
 .CarouselContainer {
-    height: 60vh;
     padding: 0 !important;
-    overflow: hidden;
+    z-index: -1;
 }
 
-.Carousel {
-    height: 100%;
+.Slide {
+    height: 70vh;
+    position: relative;
+    padding: 0 !important;
 }
 
-.CarouselItem {
+.SlideContent {
+    position: absolute;
+    bottom: 0;
     width: 100%;
-    height: 100%;
+    padding: 20px 15%;
+    background-color: rgba(0,0,0,.4)
 }
 
-.CarouselItem img {
-    object-fit: cover;
-    height: 100%;
+.SlideTitle {
     width: 100%;
+    text-align: center;
+    color: white;
+    font-family: 'Suranna', serif;
+    font-size: 3rem;
+}
+
+.CarouselIndicators {
+    color: white;
+    font-size: 1.25rem;
+    width: 100%;
+    text-align: center;
+}
+
+.CarouselIndicators span:hover {
+    cursor: pointer;
+}
+
+.LoadingContainer {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -6,6 +6,7 @@ import Hamburger from '../assets/img/hamburger.png'
 import Instagram from '../assets/img/instagram.png'
 import Facebook from '../assets/img/facebook.png'
 import Twitter from '../assets/img/twitter.png'
+import Logo from '../assets/img/logo.png'
 
 function NavbarContainer(props) {
     return (
@@ -14,7 +15,9 @@ function NavbarContainer(props) {
                 <NavLink onClick={props.toggleNavbar}  className="mr-auto">
                     <img src={Hamburger} className="Hamburger" alt=""/>
                 </NavLink>
-                <NavbarBrand href="#" className="NavbarBrand">LOGO</NavbarBrand>
+                <NavbarBrand href="#" className="NavbarBrand">
+                    <img src={Logo} alt="" className="NavbarLogo"/>
+                </NavbarBrand>
                 <NavLink className="ml-auto">
                     <img src={Instagram} alt="" className="SocialIcon"/>
                 </NavLink>
