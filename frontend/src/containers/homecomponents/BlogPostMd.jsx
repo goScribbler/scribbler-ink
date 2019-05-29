@@ -14,13 +14,23 @@ function BlogPostMd(props) {
         backgroundRepeat: 'none'
     }
 
+    let fontStyle = {
+        fontSize: ''
+    }
+    if (props.title.length <= 24) {
+        fontStyle.fontSize = '2.5rem'
+    }
+    if (props.title.length >= 25) {
+        fontStyle.fontSize = '2rem'
+    }
+
     return (
         <Container className="BlogPostMd">
             <div className="BlogPostMdDate">
                 {NewDate}
             </div>
             <div className="BlogPostMdImage" style={styles}></div>
-            <div className="BlogPostMdTitle">{props.title}</div>
+            <div className="BlogPostMdTitle" style={fontStyle}>{props.title}</div>
         </Container>
     )
 }

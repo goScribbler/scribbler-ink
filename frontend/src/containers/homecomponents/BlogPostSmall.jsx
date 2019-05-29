@@ -9,14 +9,30 @@ function BlogPostSmall(props) {
         backgroundRepeat: 'none'
     }
 
+    let fontStyle = {
+        fontSize: ''
+    }
+    if (props.title.length <= 16) {
+        fontStyle.fontSize = '2.5rem'
+    }
+    if (props.title.length >= 17) {
+        fontStyle.fontSize = '2rem'
+    }
+
     return (
         <Container className="BlogPostSmall">
             <Row>
-                <Col md="2">
+                <Col md="4">
                     <div className="BlogPostSmallImage" style={styles}></div>
                 </Col>
                 <Col className="BlogPostSmallTitleContainer">
-                    <div className="BlogPostSmallTitle">{props.title}</div>
+                    <Container fluid>
+                        <Row>
+                            <Col>
+                                <div className="BlogPostSmallTitle" style={fontStyle}>{props.title}</div>
+                            </Col>
+                        </Row>
+                    </Container>
                 </Col>
             </Row>
         </Container>
