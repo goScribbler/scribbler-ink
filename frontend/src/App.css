@@ -4,3 +4,10 @@
   font-family: "ProximaNova";
   src: url(./containers/assets/font/ProximaNova-Reg.otf)
 }
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}

@@ -18,19 +18,21 @@ function NavCollapse(props) {
                 </Row>
                 <Row className="NavCollapseSocialsRow">
                     <Col sm={{ size: 6, offset: 3}} className="NavCollapseSocials">
-                        <img src={Instagram} alt="" className="SocialIcon"/>
-                        <img src={Facebook} alt="" className="SocialIcon"/>
-                        <img src={Twitter} alt="" className="SocialIcon"/>
+                        <a href="https://www.instagram.com/goscribbler/">
+                            <img src={Instagram} alt="" className="SocialIcon"/></a>
+                        <a href="https://www.facebook.com/goScribbler/">
+                            <img src={Facebook} alt="" className="SocialIcon"/></a>
+                        <a href="https://twitter.com/goscribbler/">
+                            <img src={Twitter} alt="" className="SocialIcon"/></a>
                     </Col>
                 </Row>
                 <Row className="NavCollapseLinksRow">
-                    <Col sm={{ size: 12 }} className="NavCollapseLinks">HOME</Col>
-                    <Col sm={{ size: 12 }} className="NavCollapseLinks">NEWSLETTER</Col>
-                    <Col sm={{ size: 12 }} className="NavCollapseLinks">WRITE FOR US</Col>
-                    <Col sm={{ size: 12 }} className="NavCollapseLinks">SUBSCRIPTION BOX</Col>
-                    <Col sm={{ size: 12 }} className="NavCollapseLinks">WRITER GIFTS</Col>
-                    <Col sm={{ size: 12 }} className="NavCollapseLinks">FAQ</Col>
-                    <Col sm={{ size: 12 }} className="NavCollapseLinks">CONTACT</Col>
+                    <Col sm={{ size: 12 }} className="NavCollapseLinks"><a href="https://www.goscribbler.com/">HOME</a></Col>
+                    <Col sm={{ size: 12 }} className="NavCollapseLinks"><a href="https://www.goscribbler.com/shop/all/">WRITE FOR US</a></Col>
+                    <Col sm={{ size: 12 }} className="NavCollapseLinks"><a href="https://www.goscribbler.com/shop/all/">SUBSCRIPTION BOX</a></Col>
+                    <Col sm={{ size: 12 }} className="NavCollapseLinks"><a href="https://www.goscribbler.com/shop/all/">WRITER'S GIFTS</a></Col>
+                    <Col sm={{ size: 12 }} className="NavCollapseLinks"><a href="https://www.goscribbler.com/shop/all/">FAQ</a></Col>
+                    <Col sm={{ size: 12 }} className="NavCollapseLinks"><a href="https://www.goscribbler.com/shop/all/">CONTACT</a></Col>
                 </Row>
             </Container>
         )

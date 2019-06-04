@@ -58,3 +58,7 @@
     font-family: "Lato", sans-serif;
     margin: 10px 0px;
 }
+
+.NavCollapseLinks a {
+    color: black;
+}

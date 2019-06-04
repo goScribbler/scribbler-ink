@@ -1,9 +1,102 @@
 .ContentContainer {
     background-color: #f9f9f8;
     padding: 10vh;
+    box-sizing: border-box;
 }
 
 .BlogPostsButtons {
     display: flex;
     justify-content: center;
+}
+
+.SideLinks {
+    padding-right: 0 !important;
+}
+
+.SideLinkHeader {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.SideLinks .Social {
+    width: 100%;
+    height: 80px;
+    padding: 15px 30px;
+    margin: 10px 0;
+}
+
+.SideLinks .Social a {
+    float: right;
+    text-align: right;
+    line-height: 54px;
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-size: 1.2rem;
+}
+
+.SideLinks .Social a:hover {
+    text-decoration: none;
+}
+
+.SideLinks .Instagram {
+    background-color: rgb(219, 51, 87);
+}
+
+.SideLinks .Instagram img {
+    filter: invert(100%)
+}
+
+.SideLinks .Facebook {
+    background-color: #3b5998;
+}
+
+.SideLinks .Facebook img {
+    filter: invert(100%)
+}
+
+.SideLinks .Twitter {
+    background-color: #00aced;
+    margin-bottom: 30px;
+}
+
+.SideLinks .Twitter img {
+    filter: invert(100%)
+}
+
+.SideLinks .SubBox {
+    width: 100%;
+    padding-right: 30px;
+    margin-bottom: 30px;
+}
+
+.SideLinks .Newsletter {
+    width: 100%;
+    padding-right: 30px;
+}
+
+.NewsForm {
+    width: 55%;
+    border: 2px solid #ff6a00;
+    font-family: 'Lato', sans-serif;
+    padding: 5px 10px;
+    margin: 20px 0 30px 0;
+}
+
+.NewsButton {
+    float: right;
+    margin: 20px 30px 30px 0;
+    width: 35%;
+    padding: 5px 10px;
+    background-color: #ff6a00;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    box-shadow: none;
+    border: none;
+    border: 2px solid #ff6a00;
+}
+
+.SideLinks .WriterGifts {
+    width: 100%;
+    padding-right: 30px;
+    margin-bottom: 30px;
 }
