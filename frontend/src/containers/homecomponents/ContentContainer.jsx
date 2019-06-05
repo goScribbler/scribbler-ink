@@ -15,6 +15,12 @@ import SubscriptionBox2 from '../assets/img/subscription_box.png'
 import TopPosts from '../assets/img/topposts.png'
 import WriterGifts from '../assets/img/writergifts.png'
 import WriterGifts2 from '../assets/img/writer_gift.png'
+import BlackButton1 from '../assets/img/buttons/Black_Button_1.png'
+import BlackButton2 from '../assets/img/buttons/Black_Button_2.png'
+import BlackButton3 from '../assets/img/buttons/Black_Button_3.png'
+import OrangeButton1 from '../assets/img/buttons/Orange_Button_1.png'
+import OrangeButton2 from '../assets/img/buttons/Orange_Button_2.png'
+import OrangeButton3 from '../assets/img/buttons/Orange_Button_3.png'
 import './ContentContainer.css'
 
 function ContentContainer(props) {
@@ -63,8 +69,8 @@ function ContentContainer(props) {
             return (
                 <Col md="12">
                     <div className="BlogPostsButtons">
-                        <button onClick={props.changePostsPage.bind(this, 1)}>1</button>
-                        <button onClick={props.changePostsPage.bind(this, 2)}>2</button>
+                        <img alt="" src={(props.posts_page === 1) ? OrangeButton1 : BlackButton1} onClick={props.changePostsPage.bind(this, 1)}/>
+                        <img alt="" src={(props.posts_page === 2) ? OrangeButton2 : BlackButton2} onClick={props.changePostsPage.bind(this, 2)}/>
                     </div>
                 </Col>
             )
@@ -73,9 +79,9 @@ function ContentContainer(props) {
             return (
                 <Col md="12">
                     <div className="BlogPostsButtons">
-                        <button onClick={props.changePostsPage.bind(this, 1)}>1</button>
-                        <button onClick={props.changePostsPage.bind(this, 2)}>2</button>
-                        <button onClick={props.changePostsPage.bind(this, 3)}>3</button>
+                        <img alt="" src={(props.posts_page === 1) ? OrangeButton1 : BlackButton1} onClick={props.changePostsPage.bind(this, 1)}/>
+                        <img alt="" src={(props.posts_page === 2) ? OrangeButton2 : BlackButton2} onClick={props.changePostsPage.bind(this, 2)}/>
+                        <img alt="" src={(props.posts_page === 3) ? OrangeButton3 : BlackButton3} onClick={props.changePostsPage.bind(this, 3)}/>
                     </div>
                 </Col>
             )
@@ -135,7 +141,7 @@ function ContentContainer(props) {
                         </div>
                     </a>
                     <img src={SubscriptionBox} alt="" className="SideLinkHeader"/>
-                    <a href="">
+                    <a href="https://www.goscribbler.com/subscribe/1352503911_Scribbler+Box+Subscription">
                         <img src={SubscriptionBox2} alt="" className="SubBox"/>
                     </a>
                     <img src={Newsletter} alt="" className="SideLinkHeader"/>

@@ -19,13 +19,19 @@ function NavbarContainer(props) {
                     <img src={Logo} alt="" className="NavbarLogo"/>
                 </NavbarBrand>
                 <NavLink className="ml-auto">
-                    <img src={Instagram} alt="" className="SocialIcon"/>
+                    <a href="https://www.instagram.com/goscribbler/">
+                        <img src={Instagram} alt="" className="SocialIcon"/>
+                    </a>
                 </NavLink>
                 <NavLink>
-                    <img src={Facebook} alt="" className="SocialIcon"/>
+                    <a href="https://www.facebook.com/goScribbler/">
+                        <img src={Facebook} alt="" className="SocialIcon"/>
+                    </a>
                 </NavLink>
                 <NavLink>
-                    <img src={Twitter} alt="" className="SocialIcon"/>
+                    <a href="https://twitter.com/goscribbler/">
+                        <img src={Twitter} alt="" className="SocialIcon"/>
+                    </a>
                 </NavLink>
             </Navbar>
             <NavCollapse toggleNavbar={props.toggleNavbar} nav_collapsed={props.nav_collapsed}/>

@@ -1,12 +1,18 @@
 .ContentContainer {
     background-color: #f9f9f8;
-    padding: 10vh;
+    padding: 10vh 10vh 5vh 10vh;
     box-sizing: border-box;
 }
 
 .BlogPostsButtons {
     display: flex;
     justify-content: center;
+}
+
+.BlogPostsButtons img {
+    max-width: 50px;
+    max-height: 50px;
+    margin: 20px 5px
 }
 
 .SideLinks {

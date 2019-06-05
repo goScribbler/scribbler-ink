@@ -26,13 +26,7 @@ function BlogPostSide(props) {
                     <div className="BlogPostSideImage" style={styles}></div>
                 </Col>
                 <Col className="BlogPostSideTitleContainer">
-                    <Container fluid>
-                        <Row>
-                            <Col>
-                                <div className="BlogPostSideTitle" style={fontStyle}>{props.title}</div>
-                            </Col>
-                        </Row>
-                    </Container>
+                    <div className="BlogPostSideTitle" style={fontStyle}>{props.title}</div>
                 </Col>
             </Row>
         </Container>

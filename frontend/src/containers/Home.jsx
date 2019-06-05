@@ -2,6 +2,8 @@ import React from 'react';
 import NavbarContainer from './homecomponents/NavbarContainer'
 import CarouselContainer from './homecomponents/CarouselContainer'
 import ContentContainer from './homecomponents/ContentContainer'
+import InstagramContainer from './homecomponents/InstagramContainer'
+import FooterContainer from './homecomponents/FooterContainer'
 import ApiKey from '../ApiKey'
 
 class Home extends React.Component {
@@ -15,7 +17,8 @@ class Home extends React.Component {
             previous_carousel_index: 0,
             posts_page: 1,
             news_email: '',
-            news_status: ''
+            news_status: '',
+            instagram_posts: [],
         }
         this.toggleNavbar = this.toggleNavbar.bind(this)
         this.changeCarouselIndex = this.changeCarouselIndex.bind(this)
@@ -30,6 +33,11 @@ class Home extends React.Component {
         .then(response => response.json())
         .then(data => {
             this.setState({ posts: data }, () => this.setState({ loading: false }))
+        })
+        fetch('https://api.instagram.com/v1/users/self/media/recent/?access_token=6238699054.2f3c5b2.74aa9d9e31824f20b6244ae437d43561')
+        .then(response => response.json())
+        .then(data => {
+            this.setState({ instagram_posts: data.data}, () => console.log(this.state.instagram_posts))
         })
         this.cycleCarouselIndex()
     }
@@ -115,6 +123,8 @@ class Home extends React.Component {
                 <NavbarContainer toggleNavbar={this.toggleNavbar} nav_collapsed={this.state.nav_collapsed}/>
                 <CarouselContainer carousel_index={this.state.carousel_index} posts={this.state.posts} loading={this.state.loading} changeCarouselIndex={this.changeCarouselIndex}/>
                 <ContentContainer news_status={this.state.news_status} updateEmail={this.updateEmail} postData={this.postData} loading={this.state.loading} posts={this.state.posts} posts_page={this.state.posts_page} changePostsPage={this.changePostsPage}/>
+                <InstagramContainer instagram_posts={this.state.instagram_posts}/>
+                <FooterContainer/>
             </div>
         )
     }

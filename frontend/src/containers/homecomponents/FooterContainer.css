@@ -1,0 +1,650 @@
+footer {
+	background: #e1e1e1;
+	padding-top: 25px;
+	padding-bottom: 40px;
+	font-size: 12px;
+}
+footer .FooterTop {
+	overflow: auto;
+	padding-bottom: 20px;
+}
+footer .FooterTop .FooterTopLeft {
+	float: left;
+	width: 20%;
+	overflow: auto;
+}
+footer .FooterTop .FooterTopMid {
+	float: left;
+	width: 40%;
+	overflow: auto;	
+}
+footer .FooterTop .FooterTopRight {
+	float: left;
+	width: 40%;
+	overflow: auto;	
+}
+footer .FooterTop .FooterTopLeft .FooterPad, footer .FooterTop .FooterTopMid .FooterPad, footer .FooterTop .FooterTopRight .FooterPad {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+ul.botnavlinks {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+	padding-bottom: 20px;
+	font-weight: bold;
+}
+ul.botnavlinks a {
+	color: #000;
+}
+ul.botnavlinks li {
+	padding-bottom: 10px;
+}
+footer .FooterNewsletter h4 {
+	margin-top: 0px;
+}
+footer .FooterNewsletter {
+	padding-bottom: 10px;
+}
+footer .BottomNav {
+	border-top: 1px solid #999;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+a.FooterButton {
+	color: #fff;
+	background: #0abab5;
+    border: none;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	text-transform: uppercase;
+}
+a.FooterButton:hover {
+	background: #00969c;
+	text-decoration: none;
+}
+footer .BottomNav a {
+	color: #000;
+}
+
+footer .FooterTop .FooterTopRight .FooterDonate h4 {
+	margin-top: 0px;
+}
+
+footer .FooterTop a {
+	font-weight: bold;
+}
+footer .BottomNav .BottomNavText {
+	float: left;
+	overflow: auto;
+}
+footer .BottomNav .BottomNavIcons {
+	float: right;
+	overflow: auto;
+}
+footer .BottomNav .FooterInstagramLogo, footer .BottomNav .FooterFacebookLogo, footer .BottomNav .FooterTwitterLogo {
+	float: left;
+	overflow: auto;
+	padding-left: 10px;
+}
+footer .BottomNav .FooterInstagramLogo img, footer .BottomNav .FooterFacebookLogo img, footer .BottomNav .FooterTwitterLogo img {
+	height: 25px;
+}
+
+@media screen and (max-width: 900px) {
+	footer .FooterTop .FooterTopLeft, footer .FooterTop .FooterTopMid {
+		width: 50%
+	}	
+	footer .FooterTop .FooterTopRight {
+		display: none;
+	}
+}
+@media screen and (max-width: 600px) {	
+	footer .FooterTop .FooterTopLeft, footer .FooterTop .FooterTopMid {
+		width: 100%
+	}	
+	footer .FooterTop .FooterTopLeft .FooterQuestions {
+		border-top: 1px solid #999;
+		border-bottom: 1px solid #999;
+		padding-bottom: 10px;
+	}
+	footer .FooterTop .FooterTopMid {
+		padding-top: 20px;
+	}
+	footer .BottomNav .BottomNavText {
+		float: none;
+		overflow: auto;
+		text-align: center;
+	}
+	footer .BottomNav .BottomNavIcons {
+		padding-top: 15px;
+		width: 100%;
+	}
+	footer .BottomNav .BottomNavIcons .ctr {
+		margin: 0 auto;
+		width: 100px;
+	}
+}
+
+input.email {
+	width: 65%;
+}
+input.button {
+	text-transform: uppercase;
+	color: #000;
+	background: #0abab5;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 25px;
+	padding-right: 25px;
+	margin-top: 15px;
+  font-size: 16px; 
+  font-weight: bold;
+}
+
+input.button:hover {
+	background: #00969c;
+  color: #fff;
+}
+button {
+	text-transform: uppercase;
+  font-weight: bold;
+}
+.form-control {
+ 	width: auto; 
+}
+
+section[class^="component"] {
+	padding: 0px 0;
+}
+
+footer {
+	background: #e1e1e1;
+	padding-top: 25px;
+	padding-bottom: 40px;
+	font-size: 12px;
+}
+footer .FooterTop {
+	overflow: auto;
+	padding-bottom: 20px;
+}
+footer .FooterTop .FooterTopLeft {
+	float: left;
+	width: 20%;
+	overflow: auto;
+}
+footer .FooterTop .FooterTopMid {
+	float: left;
+	width: 40%;
+	overflow: auto;	
+}
+footer .FooterTop .FooterTopRight {
+	float: left;
+	width: 40%;
+	overflow: auto;	
+}
+footer .FooterTop .FooterTopLeft .FooterPad, footer .FooterTop .FooterTopMid .FooterPad, footer .FooterTop .FooterTopRight .FooterPad {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+ul.botnavlinks {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+	padding-bottom: 20px;
+	font-weight: bold;
+}
+ul.botnavlinks a {
+	color: #000;
+}
+ul.botnavlinks li {
+	padding-bottom: 10px;
+}
+footer .FooterNewsletter h4 {
+	margin-top: 0px;
+}
+footer .FooterNewsletter {
+	padding-bottom: 10px;
+}
+footer .BottomNav {
+	border-top: 1px solid #999;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+a.FooterButton {
+	color: #fff;
+	background: #0abab5;
+    border: none;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	text-transform: uppercase;
+}
+a.FooterButton:hover {
+	background: #00969c;
+	text-decoration: none;
+}
+footer .BottomNav a {
+	color: #000;
+}
+
+footer .FooterTop .FooterTopRight .FooterDonate h4 {
+	margin-top: 0px;
+}
+
+footer .FooterTop a {
+	font-weight: bold;
+}
+footer .BottomNav .BottomNavText {
+	float: left;
+	overflow: auto;
+}
+footer .BottomNav .BottomNavIcons {
+	float: right;
+	overflow: auto;
+}
+footer .BottomNav .FooterInstagramLogo, footer .BottomNav .FooterFacebookLogo, footer .BottomNav .FooterTwitterLogo {
+	float: left;
+	overflow: auto;
+	padding-left: 10px;
+}
+footer .BottomNav .FooterInstagramLogo img, footer .BottomNav .FooterFacebookLogo img, footer .BottomNav .FooterTwitterLogo img {
+	height: 25px;
+}
+
+@media screen and (max-width: 800px) {
+	header .TopNav {
+		display: none;
+	}
+	footer .FooterTop .FooterTopLeft, footer .FooterTop .FooterTopMid {
+		width: 50%
+	}	
+	footer .FooterTop .FooterTopRight {
+		display: none;
+	}
+}
+@media screen and (max-width: 600px) {	
+	footer .FooterTop .FooterTopLeft, footer .FooterTop .FooterTopMid {
+		width: 100%
+	}	
+	footer .FooterTop .FooterTopLeft .FooterQuestions {
+		border-top: 1px solid #999;
+		border-bottom: 1px solid #999;
+		padding-bottom: 10px;
+	}
+	footer .FooterTop .FooterTopMid {
+		padding-top: 20px;
+	}
+	footer .BottomNav .BottomNavText {
+		float: none;
+		overflow: auto;
+		text-align: center;
+	}
+	footer .BottomNav .BottomNavIcons {
+		padding-top: 15px;
+		width: 100%;
+	}
+	footer .BottomNav .BottomNavIcons .ctr {
+		margin: 0 auto;
+		width: 100px;
+	}		
+}
+footer .footerpromos {
+	position: relative;
+	clear: both;
+	overflow: hidden;
+	padding-bottom: 15px;
+	padding-top: 10px;
+    display: none;
+}
+
+footer .instagram, footer .subboxad {
+	width: 50%;
+	float: left;
+	text-align: center;
+	margin-bottom: 30px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;	
+}
+footer .instagram .instagramcontent, footer .subboxad .boxadcontent {
+	width: 400px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 20px;	
+}
+footer .instagram h2, footer .subboxad h2 {
+	font-size: 28px;
+	text-transform: uppercase;
+	font-weight: normal;
+	margin-top: 0px;
+	padding-top: 0px;
+	padding-bottom: 10px;
+}
+
+@media screen and (max-width: 900px) {
+footer .instagram, footer .subboxad {
+	width: 100%;
+	float: none;
+	background: #000;
+}
+footer .instagram {
+	border-bottom: 1px solid #999;
+	padding-bottom: 15px;
+	margin-bottom: 35px;
+}
+}
+
+@media screen and (max-width: 600px) {
+footer .subboxad .boxadcontent img {
+	width: 80%;		
+}
+}
+
+footer .footercontent .topfooterrow {
+	border-top: 1px solid #999;
+	width: 100%;
+	clear: both;
+	overflow: hidden;	
+}
+footer .footercontent .topfooterrow a:link, footer .footercontent .topfooterrow a:active, footer .footercontent .topfooterrow a:hover, footer .footercontent .topfooterrow a:visited {
+	color: #999;
+}
+footer .footercontent .topfooterrow ul {
+	padding-left: 0px;
+}
+footer .footercontent .topfooterrow li {
+	padding-left: 40px;
+	list-style: none;
+	padding-bottom: 5px;
+	font-size: 11px;
+}
+footer .footercontent .topfooterrow .newsandspecialoffers {
+	float: left;
+	width: 40%;
+	text-align: center;
+	font-size: 12px;
+	text-transform: uppercase;
+	border-right: 1px solid #999;
+	height: 160px;
+}
+footer .footercontent .topfooterrow .newsandspecialoffers h2 {
+	font-size: 12px;
+	padding-top: 10px;
+}
+footer .footercontent .topfooterrow .newsandspecialoffers .newsandspecialoffersinput input {
+	width: 70%;
+	font-size: 12px;
+}
+footer .footercontent .topfooterrow .newsandspecialoffers .newsandspecialoffersinput {
+	padding-bottom: 15px;
+}
+footer .footercontent .topfooterrow .newsandspecialoffers .newsandspecialoffersbutton a:link, 
+footer .footercontent .topfooterrow .newsandspecialoffers .newsandspecialoffersbutton a:active, 
+footer .footercontent .topfooterrow .newsandspecialoffers .newsandspecialoffersbutton a:hover, 
+footer .footercontent .topfooterrow .newsandspecialoffers .newsandspecialoffersbutton a:visited {
+	background: #000;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 25px;
+	padding-right: 25px;
+	font-size: 11px;
+}
+footer .footercontent .topfooterrow .online {
+	float: left;
+	width: 20%;
+	text-align: left;	
+	font-size: 12px;	
+	text-transform: uppercase;
+	border-right: 1px solid #999;
+	height: 160px;	
+}
+footer .footercontent .topfooterrow .online h2 {
+	font-size: 12px;
+	padding-top: 10px;	
+	padding-left: 40px;
+}
+footer .footercontent .topfooterrow .information {
+	float: left;
+	width: 20%;
+	text-align: left;	
+	font-size: 12px;	
+	text-transform: uppercase;	
+	border-right: 1px solid #999;
+	height: 160px;	
+}
+footer .footercontent .topfooterrow .information h2 {
+	font-size: 12px;
+	padding-top: 10px;
+	padding-left: 40px;	
+}
+footer .footercontent .topfooterrow .customercare {
+	float: left;
+	width: 19%;
+	text-align: left;
+	font-size: 12px;
+	text-transform: uppercase;
+	height: 160px;	
+}
+footer .footercontent .topfooterrow .customercare h2 {
+	font-size: 12px;
+	padding-top: 10px;	
+	padding-left: 40px;	
+}
+footer .footercontent .botfooterrow {
+	border-top: 1px solid #999;
+	width: 100%;
+	clear: both;
+	overflow: hidden;
+}
+footer .footercontent .botfooterrow .giftcards {
+	float: left;
+	width: 40%;
+	border-right: 1px solid #999;
+	height: 165px;	
+	text-align: center;	
+	padding-top: 15px;
+}
+footer .footercontent .botfooterrow .giftcards h2 {
+	font-size: 12px;
+	padding-top: 10px;
+	text-align: center;
+	text-transform: uppercase;
+}
+footer .footercontent .botfooterrow .giftcards .giftcardcontent {
+	padding-bottom: 15px;
+}
+footer .footercontent .botfooterrow .giftcards .giftcardbutton a:link, 
+footer .footercontent .botfooterrow .giftcards .giftcardbutton a:active, 
+footer .footercontent .botfooterrow .giftcards .giftcardbutton a:hover, 
+footer .footercontent .botfooterrow .giftcards .giftcardbutton a:visited {
+	background: #000;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 25px;
+	padding-right: 25px;
+	text-transform: uppercase;
+}
+footer .footercontent .botfooterrow .giftcards .giftcardbutton {
+	font-size: 11px;
+}
+footer .footercontent .botfooterrow .address {
+	float: left;
+	width: 20%;	
+	border-right: 1px solid #999;
+	height: 115px;	
+	font-size: 11px;	
+	text-align: center;
+	padding-top: 65px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+footer .footercontent .botfooterrow .charity {
+	float: left;
+	width: 39%;	
+	height: 180px;	
+	font-size: 11px;		
+}
+footer .footercontent .botfooterrow .charity h2 {
+	font-size: 12px;
+	padding-top: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	text-align: center;	
+}
+footer .footercontent .botfooterrow .charity .charitycontent {
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 15px;
+}
+footer .footercontent .botfooterrow .charity .charitybutton {
+	text-align: center;
+	padding-bottom: 15px;
+	text-transform: uppercase;
+	font-size: 11px;
+}
+footer .footercontent .botfooterrow .charity .charitybutton a:link, 
+footer .footercontent .botfooterrow .charity .charitybutton a:active, 
+footer .footercontent .botfooterrow .charity .charitybutton a:hover, 
+footer .footercontent .botfooterrow .charity .charitybutton a:visited {
+	background: #000;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+@media screen and (max-width: 1000px) {
+footer .footercontent .topfooterrow .newsandspecialoffers {
+	float: none;
+	width: 100%;	
+	font-size: 11px;
+	clear: both;
+	height: auto;
+	border-bottom: 1px solid #999;
+	padding-bottom: 30px;
+}
+footer .footercontent .topfooterrow .newsandspecialoffers .newsandspecialoffersbutton {
+	padding-bottom: 25px;
+}
+footer .footercontent .topfooterrow .online {
+	width: 33%;
+}
+footer .footercontent .topfooterrow .information {
+	width: 33%;
+}
+footer .footercontent .topfooterrow .customercare {
+	width: 33%;
+}
+footer .footercontent .botfooterrow .giftcards {
+	width: 50%;
+}
+footer .footercontent .botfooterrow .address {
+	width: 49%;
+	border-right: 0px;
+}
+footer .footercontent .botfooterrow .charity {
+	float: none;
+	width: 100%;	
+	font-size: 11px;
+	clear: both;
+	height: auto;
+	border-top: 1px solid #999;	
+}	
+footer .footercontent .botfooterrow .charity .charitybutton {
+	padding-bottom: 25px;
+}	
+}
+@media screen and (max-width: 600px) {
+footer .footercontent .topfooterrow .online {
+	width: 100%;
+	height: auto;
+	float: none;
+	text-align: center;
+	padding-left: 0px;
+	border-bottom: 1px solid #999;
+	padding-bottom: 15px;	
+}
+footer .footercontent .topfooterrow .online h2 {
+	padding-left: 0px;
+}
+footer .footercontent .topfooterrow .information {
+	width: 100%;
+	height: auto;	
+	float: none;
+	text-align: center;
+	padding-left: 0px;
+	border-bottom: 1px solid #999;	
+	padding-bottom: 15px;
+}
+footer .footercontent .topfooterrow .information h2 {
+	padding-left: 0px;
+}
+footer .footercontent .topfooterrow .customercare {
+	width: 100%;
+	height: auto;	
+	float: none;	
+	text-align: center;
+	padding-left: 0px;
+	padding-bottom: 15px;	
+}
+footer .footercontent .topfooterrow .customercare h2 {
+	padding-left: 0px;
+}	
+footer .footercontent .botfooterrow .giftcards {
+	width: 100%;
+	height: auto;	
+	float: none;
+	border-bottom: 1px solid #999;	
+	padding-top: 0px;
+	padding-bottom: 5px;	
+}
+footer .footercontent .botfooterrow .giftcards .giftcardbutton {
+	padding-bottom: 25px;
+}	
+footer .footercontent .botfooterrow .address {
+	width: 100%;
+	height: auto;	
+	float: none;
+	padding-top: 25px;
+	padding-bottom: 15px;
+}
+footer .footercontent .topfooterrow li {
+	padding-left: 0px;
+}
+}
+input.button2 {
+	text-transform: uppercase;
+	color: #fff;
+	background: #000;
+	font-weight: bold;
+	font-size: 11px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-top: 15px;
+	border: 0;
+}
+.giftcards, .address {
+    height: 181px !important;
+}
+
+.wrapper {
+    padding: 0 30px;
+}
