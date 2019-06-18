@@ -2,6 +2,12 @@
     background-color: white;
     padding: 15px 0;
     margin-bottom: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.BlogPostBig:hover {
+    text-decoration: none;
 }
 
 .BlogPostBigDate {
@@ -35,11 +41,11 @@
     text-align: center;
 }
 
-.BlogPostBigLink a {
+.BlogPostBigLink span {
     color: #ff6a00;
     font-family: 'Lato', sans-serif;
 }
 
-.BlogPostBigLink a:hover {
+.BlogPostBigLink span:hover {
     color: #f8a971;
 }

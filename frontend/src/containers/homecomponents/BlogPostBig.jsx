@@ -25,16 +25,17 @@ function BlogPostBig(props) {
     }
 
     return (
-        <Container className="BlogPostBig">
-            <div className="BlogPostBigDate">
-                {NewDate}
-            </div>
-            <div className="BlogPostBigImage" style={styles}></div>
-            <div className="BlogPostBigTitle" style={fontStyle}>{props.title}</div>
-            <div className="BlogPostBigPreview">{props.preview}</div>
-            <div className="BlogPostBigLink"><a href="#">READ MORE</a></div>
-
-        </Container>
+        <a href={`/post/${props.slug}`} style={{ textDecoration: 'none' }}>
+            <Container className="BlogPostBig">
+                <div className="BlogPostBigDate">
+                    {NewDate}
+                </div>
+                <div className="BlogPostBigImage" style={styles}></div>
+                <div className="BlogPostBigTitle" style={fontStyle}>{props.title}</div>
+                <div className="BlogPostBigPreview">{props.preview}</div>
+                <div className="BlogPostBigLink"><span>READ MORE</span></div>
+            </Container>
+        </a>
     )
 }
 

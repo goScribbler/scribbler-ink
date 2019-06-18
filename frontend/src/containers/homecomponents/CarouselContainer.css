@@ -32,6 +32,10 @@
     text-align: center;
 }
 
+.carousel_active {
+    font-size: 2rem;
+}
+
 .CarouselIndicators span:hover {
     cursor: pointer;
 }

@@ -1,0 +1,64 @@
+.NavCollapse {
+    width: 30vw !important;
+    background-color: #f9f9f8;
+    position: absolute;
+    left: -30vw;
+    top: 0;
+    -webkit-animation: slide 0.5s forwards;
+    animation: slide 0.5s forwards;
+    z-index: 1;
+}
+
+@-webkit-keyframes slide {
+    100% { left: 0; }
+}
+
+@keyframes slide {
+    100% { left: 0; }
+}
+
+.NavCollapseSocialsRow {
+    border-bottom: 5px solid #ff6a00;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-bottom: 30px;
+}
+
+.NavCollapseSocials {
+    text-align: center;
+}
+
+.NavCollapseSocials .SocialIcon {
+    margin: 0 5px;
+}
+
+.NavCollapseCloseRow {
+    text-align: right;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.NavCollapseClose {
+    color: #ff6a00;
+    font-size: 3rem;
+}
+
+.NavCollapseClose:hover {
+    cursor: pointer;
+}
+
+.NavCollapseLinksRow {
+    padding-top: 30px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-bottom: 30px;
+}
+
+.NavCollapseLinks {
+    font-family: "Lato", sans-serif;
+    margin: 10px 0px;
+}
+
+.NavCollapseLinks a {
+    color: black;
+}

@@ -12,20 +12,20 @@ function CarouselContainer(props) {
 
         return (
             <Container fluid className="CarouselContainer">
-                <div className="Slide" style={styles}>
-                    <div className="SlideContent">
-                        <div className="SlideTitle">{props.posts[props.carousel_index].title.rendered}</div>
-                        <div className="CarouselIndicators">
-                            <span id="carousel0" onClick={props.changeCarouselIndex.bind(this, 0)}>●</span>
-                            <span id="carousel1" onClick={props.changeCarouselIndex.bind(this, 1)}>○</span>
-                            <span id="carousel2" onClick={props.changeCarouselIndex.bind(this, 2)}>○</span>
-                            <span id="carousel3" onClick={props.changeCarouselIndex.bind(this, 3)}>○</span>
-                            <span id="carousel4" onClick={props.changeCarouselIndex.bind(this, 4)}>○</span>
+                <a href={`/post/${props.posts[props.carousel_index].slug}`}>
+                    <div className="Slide" style={styles}>
+                        <div className="SlideContent">
+                            <div className="SlideTitle">{props.posts[props.carousel_index].title.rendered}</div>
+                            <div className="CarouselIndicators">
+                                <span id="carousel0" onClick={props.changeCarouselIndex.bind(this, 0)}>●</span>
+                                <span id="carousel1" onClick={props.changeCarouselIndex.bind(this, 1)}>○</span>
+                                <span id="carousel2" onClick={props.changeCarouselIndex.bind(this, 2)}>○</span>
+                                <span id="carousel3" onClick={props.changeCarouselIndex.bind(this, 3)}>○</span>
+                                <span id="carousel4" onClick={props.changeCarouselIndex.bind(this, 4)}>○</span>
+                            </div>
                         </div>
                     </div>
-                    
-                </div>
-                
+                </a>
             </Container>
         )
     } else return (

@@ -20,22 +20,24 @@ function BlogPostSmall(props) {
     }
 
     return (
-        <Container className="BlogPostSmall">
-            <Row>
-                <Col md="4">
-                    <div className="BlogPostSmallImage" style={styles}></div>
-                </Col>
-                <Col className="BlogPostSmallTitleContainer">
-                    <Container fluid>
-                        <Row>
-                            <Col>
-                                <div className="BlogPostSmallTitle" style={fontStyle}>{props.title}</div>
-                            </Col>
-                        </Row>
-                    </Container>
-                </Col>
-            </Row>
-        </Container>
+        <a href={`/post/${props.slug}`} style={{ textDecoration: 'none', color: 'black' }}>
+            <Container className="BlogPostSmall">
+                <Row>
+                    <Col md="4">
+                        <div className="BlogPostSmallImage" style={styles}></div>
+                    </Col>
+                    <Col className="BlogPostSmallTitleContainer">
+                        <Container fluid>
+                            <Row>
+                                <Col>
+                                    <div className="BlogPostSmallTitle" style={fontStyle}>{props.title}</div>
+                                </Col>
+                            </Row>
+                        </Container>
+                    </Col>
+                </Row>
+            </Container>
+        </a>
     )
 }
 

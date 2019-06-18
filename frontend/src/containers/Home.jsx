@@ -29,7 +29,7 @@ class Home extends React.Component {
     }
 
     componentDidMount() {
-        fetch('/wp-json/wp/v2/posts?per_page=99&filter[orderby]=date')
+        fetch('http://192.168.0.3:8000/wp-json/wp/v2/posts?per_page=99&filter[orderby]=date')
         .then(response => response.json())
         .then(data => {
             this.setState({ posts: data }, () => this.setState({ loading: false }))
@@ -51,7 +51,9 @@ class Home extends React.Component {
             carousel_index: index,
             previous_carousel_index: prevState.carousel_index
         }), () => {
+            document.getElementById(`carousel${this.state.carousel_index}`).setAttribute('class', 'carousel_active')
             document.getElementById(`carousel${index}`).innerHTML = '●'
+            document.getElementById(`carousel${this.state.previous_carousel_index}`).removeAttribute('class', 'carousel_active')
             document.getElementById(`carousel${this.state.previous_carousel_index}`).innerHTML = '○'
         })
     }
@@ -60,7 +62,9 @@ class Home extends React.Component {
         function cycle() {
             if (this.state.carousel_index === 4) {
                 this.setState({ carousel_index: 0, previous_carousel_index: 4 }, () => {
+                    document.getElementById(`carousel${this.state.carousel_index}`).setAttribute('class', 'carousel_active')
                     document.getElementById(`carousel${this.state.carousel_index}`).innerHTML = '●'
+                    document.getElementById(`carousel${this.state.previous_carousel_index}`).removeAttribute('class', 'carousel_active')
                     document.getElementById(`carousel${this.state.previous_carousel_index}`).innerHTML = '○'
                 })
             } else
@@ -69,7 +73,9 @@ class Home extends React.Component {
                 carousel_index: this.state.carousel_index+1,
                 previous_carousel_index: prevState.carousel_index
             }), () => {
+                document.getElementById(`carousel${this.state.carousel_index}`).setAttribute('class', 'carousel_active')
                 document.getElementById(`carousel${this.state.carousel_index}`).innerHTML = '●'
+                document.getElementById(`carousel${this.state.previous_carousel_index}`).removeAttribute('class', 'carousel_active')
                 document.getElementById(`carousel${this.state.previous_carousel_index}`).innerHTML = '○'
             })
         }
@@ -114,7 +120,6 @@ class Home extends React.Component {
 
     updateEmail(event){
         this.setState({news_email: event.target.value})
-        console.log(event.target.value)
     }
 
     render() {

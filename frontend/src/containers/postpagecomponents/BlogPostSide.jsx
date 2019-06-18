@@ -22,7 +22,7 @@ function BlogPostSide(props) {
     return (
         <Container fluid className="BlogPostSide">
             <Row>
-            <Col md="4">
+                    <Col md="4">
                     <a href={`/post/${props.slug}`} style={{ textDecoration: 'none' }}>
                         <div className="BlogPostSideImage" style={styles}></div>
                     </a>

@@ -25,13 +25,15 @@ function BlogPostMd(props) {
     }
 
     return (
-        <Container className="BlogPostMd">
-            <div className="BlogPostMdDate">
-                {NewDate}
-            </div>
-            <div className="BlogPostMdImage" style={styles}></div>
-            <div className="BlogPostMdTitle" style={fontStyle}>{props.title}</div>
-        </Container>
+        <a href={`/post/${props.slug}`} style={{ textDecoration: 'none', color: 'black' }}>
+            <Container className="BlogPostMd">
+                <div className="BlogPostMdDate">
+                    {NewDate}
+                </div>
+                <div className="BlogPostMdImage" style={styles}></div>
+                <div className="BlogPostMdTitle" style={fontStyle}>{props.title}</div>
+            </Container>
+        </a>
     )
 }
 

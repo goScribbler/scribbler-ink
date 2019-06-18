@@ -23,7 +23,7 @@ function FooterContainer(props) {
                 <h2>Box of Magic</h2>
               </div>
               <div className="boxadcontent">
-                <a href="https://www.goscribbler.com" target="_blank">
+                <a rel="noopener noreferrer" href="https://www.goscribbler.com" target="_blank">
                   <img alt="" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="//s3.amazonaws.com/cratejoy_vendor_images/scribbler/fashion_mobile-copy-0/images/BoxPromo1.jpg" />
                 </a>
               </div>
@@ -55,9 +55,9 @@ function FooterContainer(props) {
               <div className="online">
                 <h2>Online</h2>
                 <ul>
-                  <li><a href="https://www.instagram.com/goscribbler/" target="_blank">Instagram</a></li>
-                  <li><a href="https://twitter.com/goscribbler" target="_blank">Twitter</a></li>
-                  <li><a href="https://www.facebook.com/goScribbler/" target="_blank">Facebook</a></li>
+                  <li><a rel="noopener noreferrer" href="https://www.instagram.com/goscribbler/" target="_blank">Instagram</a></li>
+                  <li><a rel="noopener noreferrer" href="https://twitter.com/goscribbler" target="_blank">Twitter</a></li>
+                  <li><a rel="noopener noreferrer" href="https://www.facebook.com/goScribbler/" target="_blank">Facebook</a></li>
                 </ul>
               </div>
               <div className="information">
@@ -82,7 +82,7 @@ function FooterContainer(props) {
                 </div>	
                 <div className="giftcardcontent">The Perfect Gift for Writers</div>
                 <div className="giftcardbutton">
-                  <a href="/shop/product/1861206911">Buy Now</a>
+                  <a rel="noopener noreferrer" href="/shop/product/1861206911">Buy Now</a>
                 </div>
               </div>
               <div className="address">
@@ -95,7 +95,7 @@ function FooterContainer(props) {
                 </div>	
                 <div className="charitycontent">A portion of the proceeds from each Scribbler box go to support Community Partners of Dallas, whose mission is to ensure safety, restore dignity and inspire hope for the abused and neglected children served by Dallas County Child Protective Services.</div>
                 <div className="charitybutton">
-                  <a href="https://donatenow.networkforgood.org/communitypartnersdallas" target="_blank">Donate Today</a>
+                  <a rel="noopener noreferrer" href="https://donatenow.networkforgood.org/communitypartnersdallas" target="_blank">Donate Today</a>
                 </div>
               </div>
             </div>
@@ -112,17 +112,17 @@ function FooterContainer(props) {
             <div className="BottomNavIcons">
               <div className="ctr">
                 <div className="FooterInstagramLogo">
-                  <a href="https://www.instagram.com/goscribbler/" target="_blank">
+                  <a rel="noopener noreferrer" href="https://www.instagram.com/goscribbler/" target="_blank">
                     <img alt="" src={Instagram}/>
                   </a>
                 </div>
                 <div className="FooterFacebookLogo">
-                  <a href="https://www.facebook.com/goScribbler/" target="_blank">
+                  <a rel="noopener noreferrer" href="https://www.facebook.com/goScribbler/" target="_blank">
                     <img alt="" src={Facebook}/>
                   </a>
                 </div>
                 <div className="FooterTwitterLogo">
-                  <a href="https://twitter.com/goscribbler" target="_blank">
+                  <a rel="noopener noreferrer" href="https://twitter.com/goscribbler" target="_blank">
                     <img alt="" src={Twitter}/>
                   </a>
                 </div>
