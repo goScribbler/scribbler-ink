@@ -13,10 +13,10 @@ function BlogPostSide(props) {
         fontSize: ''
     }
     if (props.title.length <= 16) {
-        fontStyle.fontSize = '2.25rem'
+        fontStyle.fontSize = '1.75rem'
     }
     if (props.title.length >= 17) {
-        fontStyle.fontSize = '1.75rem'
+        fontStyle.fontSize = '1.25rem'
     }
 
     return (

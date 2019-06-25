@@ -53,7 +53,7 @@ class PostPage extends React.Component {
     }
 
     componentDidMount() {
-        fetch('http://192.168.0.3:8000/wp-json/wp/v2/posts?orderby=date', { signal: this.abortController.signal })
+        fetch('http://localhost:8000/wp-json/wp/v2/posts?orderby=date', { signal: this.abortController.signal })
         .then(response => response.json())
         .then(data => {
             this.setState({ posts: data })
@@ -118,7 +118,7 @@ class PostPage extends React.Component {
     }
 
     findNextPost(date) {
-        fetch(`http://192.168.0.3:8000/wp-json/wp/v2/posts?order=asc&orderby=date&after=${date}`)
+        fetch(`http://localhost:8000/wp-json/wp/v2/posts?order=asc&orderby=date&after=${date}`)
         .then (response => response.json())
         .then (data => {
             this.setState({next_post: data[0]})
@@ -126,7 +126,7 @@ class PostPage extends React.Component {
     }
 
     findPrevPost(date) {
-        fetch(`http://192.168.0.3:8000/wp-json/wp/v2/posts?order=desc&orderby=date&before=${date}`)
+        fetch(`http://localhost:8000/wp-json/wp/v2/posts?order=desc&orderby=date&before=${date}`)
         .then (response => response.json())
         .then (data => {
             this.setState({prev_post: data[0]})

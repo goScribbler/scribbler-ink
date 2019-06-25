@@ -18,10 +18,10 @@ function BlogPostBig(props) {
         fontSize: ''
     }
     if (props.title.length <= 24) {
-        fontStyle.fontSize = '2.5rem'
+        fontStyle.fontSize = '2rem'
     }
     if (props.title.length >= 25) {
-        fontStyle.fontSize = '2rem'
+        fontStyle.fontSize = '1.75rem'
     }
 
     return (

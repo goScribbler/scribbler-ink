@@ -28,11 +28,11 @@ function NavCollapse(props) {
                 </Row>
                 <Row className="NavCollapseLinksRow">
                     <Col sm={{ size: 12 }} className="NavCollapseLinks"><a href="https://www.goscribbler.com/">HOME</a></Col>
-                    <Col sm={{ size: 12 }} className="NavCollapseLinks"><a href="https://www.goscribbler.com/shop/all/">WRITE FOR US</a></Col>
+                    <Col sm={{ size: 12 }} className="NavCollapseLinks"><a href="/write-for-us">WRITE FOR US</a></Col>
                     <Col sm={{ size: 12 }} className="NavCollapseLinks"><a href="https://www.goscribbler.com/shop/all/">SUBSCRIPTION BOX</a></Col>
                     <Col sm={{ size: 12 }} className="NavCollapseLinks"><a href="https://www.goscribbler.com/shop/all/">WRITER'S GIFTS</a></Col>
-                    <Col sm={{ size: 12 }} className="NavCollapseLinks"><a href="https://www.goscribbler.com/shop/all/">FAQ</a></Col>
-                    <Col sm={{ size: 12 }} className="NavCollapseLinks"><a href="https://www.goscribbler.com/shop/all/">CONTACT</a></Col>
+                    <Col sm={{ size: 12 }} className="NavCollapseLinks"><a href="/faq">FAQ</a></Col>
+                    <Col sm={{ size: 12 }} className="NavCollapseLinks"><a href="mailto:hello@goscribbler.com">CONTACT</a></Col>
                 </Row>
             </Container>
         )
