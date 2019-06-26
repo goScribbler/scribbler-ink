@@ -1,7 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'reactstrap'
 import SideLinks from '../writeforuscomponents/SideLinks'
-import Idea from '../assets/img/WFU_idea.png'
 import './ContentContainer.css'
 
 function ContentContainer(props) {

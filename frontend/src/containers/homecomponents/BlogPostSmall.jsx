@@ -6,17 +6,18 @@ function BlogPostSmall(props) {
     let styles = {
         backgroundImage: `url(${props.header_image})`,
         backgroundSize: 'cover',
+        backgroundPosition: 'center',
         backgroundRepeat: 'none'
     }
 
     let fontStyle = {
         fontSize: ''
     }
-    if (props.title.length <= 16) {
-        fontStyle.fontSize = '2.5rem'
+    if (props.title.length <= 24) {
+        fontStyle.fontSize = '1.8rem'
     }
-    if (props.title.length >= 17) {
-        fontStyle.fontSize = '2rem'
+    if (props.title.length >= 25) {
+        fontStyle.fontSize = '1.5rem'
     }
 
     return (

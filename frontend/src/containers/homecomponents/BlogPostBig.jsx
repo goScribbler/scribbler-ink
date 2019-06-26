@@ -11,6 +11,7 @@ function BlogPostBig(props) {
     let styles = {
         backgroundImage: `url(${props.header_image})`,
         backgroundSize: 'cover',
+        backgroundPosition: 'center',
         backgroundRepeat: 'none'
     }
 
@@ -27,9 +28,6 @@ function BlogPostBig(props) {
     return (
         <a href={`/post/${props.slug}`} style={{ textDecoration: 'none' }}>
             <Container className="BlogPostBig">
-                <div className="BlogPostBigDate">
-                    {NewDate}
-                </div>
                 <div className="BlogPostBigImage" style={styles}></div>
                 <div className="BlogPostBigTitle" style={fontStyle}>{props.title}</div>
                 <div className="BlogPostBigPreview">{props.preview}</div>

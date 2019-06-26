@@ -45,7 +45,7 @@ function ContentContainer(props) {
                 let PrevImage = {
                     backgroundImage: `url(${props.prev_post.acf.preview_image})`,
                     backgroundSize: 'cover',
-                    backgroundPosition: 'center center'
+                    backgroundPosition: 'center'
                 }
                 return(
                     <Col className="PrevPost" md={{size: '4', offset: '1'}}>
@@ -76,7 +76,7 @@ function ContentContainer(props) {
                 let NextImage = {
                     backgroundImage: `url(${props.next_post.acf.preview_image})`,
                     backgroundSize: 'cover',
-                    backgroundPosition: 'center center'
+                    backgroundPosition: 'center'
                 }
                 return(
                     <Col className="NextPost" md={{size: '4', offset: '2'}}>
@@ -153,7 +153,7 @@ function ContentContainer(props) {
         let TileImage3 = {
             backgroundImage: `url(${props.active_post.acf.tile_image3})`,
             backgroundSize: 'cover',
-            backgroundPosition: 'center center'
+            backgroundPosition: 'center'
         }
 
         let BlogPostTitle = props.decodeEntities(props.active_post.title.rendered)

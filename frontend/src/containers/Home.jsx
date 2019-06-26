@@ -30,7 +30,7 @@ class Home extends React.Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:8000/wp-json/wp/v2/posts?per_page=99&filter[orderby]=date')
+        fetch('http://165.22.144.213:8000/wp-json/wp/v2/posts?per_page=99&filter[orderby]=date')
         .then(response => response.json())
         .then(data => {
             this.setState({ posts: data }, () => this.setState({ loading: false }))

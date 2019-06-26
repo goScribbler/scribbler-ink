@@ -6,6 +6,7 @@ function BlogPostSide(props) {
     let styles = {
         backgroundImage: `url(${props.header_image})`,
         backgroundSize: 'cover',
+        backgroundPosition: 'center',
         backgroundRepeat: 'none'
     }
 

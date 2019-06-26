@@ -1,7 +1,10 @@
 import React from 'react'
 import { Container, Row, Col } from 'reactstrap'
 import SideLinks from '../writeforuscomponents/SideLinks'
-import Idea from '../assets/img/WFU_idea.png'
+import Idea from '../assets/img/Writeforus_Icon_Whywrite.png'
+import Note from '../assets/img/Writeforus_Icon_Lookingfor.png'
+import Hand from '../assets/img/Writeforus_Icon_Submit.png'
+import Glass from '../assets/img/Writeforus_Icon_Next.png'
 import './ContentContainer.css'
 
 function ContentContainer(props) {
@@ -14,6 +17,7 @@ function ContentContainer(props) {
                     <Col md={{offset: '1', size: '7'}}>
                         <div className="WriteForUsContainer">
                             <h1>WRITE FOR SCRIBBLER, INK.</h1>
+                            <img src={Idea}  className="WFUIcon" alt=""/>
                             <h2>WHY WRITE FOR US</h2>
                             <ul>
                                 <li>
@@ -26,6 +30,7 @@ function ContentContainer(props) {
                                     Your bio, headshot, and a personal link of your choice will be published alongside your article.
                                 </li>
                             </ul>
+                            <img src={Note}  className="WFUIcon" alt=""/>
                             <h2>WHAT WE'RE LOOKING FOR</h2>
                             <ul>
                                 <li>
@@ -55,8 +60,10 @@ function ContentContainer(props) {
                                     </ul>
                                 </li>
                             </ul>
+                            <img src={Hand}  className="WFUIcon" alt=""/>
                             <h2>HOW TO SUBMIT</h2>
                             <p><a href="mailto:hello@goscribbler.com">Email us</a> your submission. We prefer submissions as Google documents so that editors can provide feedback and guidance within your draft, but we'll accept oher formats. Please do not include photos with your submission, though we may ask for them later, if relevant.</p>
+                            <img src={Glass}  className="WFUIcon" alt=""/>
                             <h2>WHAT HAPPENS NEXT</h2>
                             <ul>
                                 <li>

@@ -41,6 +41,11 @@
     font-family: 'Lato', sans-serif;
 }
 
+.WFUIcon {
+    width: 100%;
+    min-height: 100px;
+}
+
 .SubList {
     padding-top: 15px;
 }

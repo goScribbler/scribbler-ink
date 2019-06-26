@@ -11,6 +11,7 @@ function BlogPostMd(props) {
     let styles = {
         backgroundImage: `url(${props.header_image})`,
         backgroundSize: 'cover',
+        backgroundPosition: 'center',
         backgroundRepeat: 'none'
     }
 
@@ -18,18 +19,15 @@ function BlogPostMd(props) {
         fontSize: ''
     }
     if (props.title.length <= 24) {
-        fontStyle.fontSize = '2.5rem'
+        fontStyle.fontSize = '2rem'
     }
     if (props.title.length >= 25) {
-        fontStyle.fontSize = '2rem'
+        fontStyle.fontSize = '1.75rem'
     }
 
     return (
         <a href={`/post/${props.slug}`} style={{ textDecoration: 'none', color: 'black' }}>
             <Container className="BlogPostMd">
-                <div className="BlogPostMdDate">
-                    {NewDate}
-                </div>
                 <div className="BlogPostMdImage" style={styles}></div>
                 <div className="BlogPostMdTitle" style={fontStyle}>{props.title}</div>
             </Container>

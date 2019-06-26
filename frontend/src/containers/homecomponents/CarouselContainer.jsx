@@ -9,6 +9,7 @@ function CarouselContainer(props) {
         const styles = {
             backgroundImage: `url(${props.posts[props.carousel_index].acf.carousel_image})`,
             backgroundSize: 'cover',
+            backgroundPosition: 'center',
             backgroundRepeat: 'none',
         }
 

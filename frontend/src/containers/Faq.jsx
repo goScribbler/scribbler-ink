@@ -22,7 +22,7 @@ class Faq extends React.Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:8000/wp-json/wp/v2/posts?orderby=date')
+        fetch('http://165.22.144.213:8000/wp-json/wp/v2/posts?orderby=date')
         .then(response => response.json())
         .then(data => {
             this.setState({ posts: data })

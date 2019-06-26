@@ -19,5 +19,6 @@
 .BlogPostMdTitle {
     font-family: 'Suranna', serif;
     text-align: center;
+    height: 90px;
     padding-top: 15px;
 }
