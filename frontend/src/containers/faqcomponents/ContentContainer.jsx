@@ -10,7 +10,7 @@ function ContentContainer(props) {
                 <Row>
                     <Col className="FaqHero"></Col>
                 </Row>
-                <Row>
+                <Row className="ContentRow">
                     <Col md={{offset: '1', size: '7'}}>
                         <div className="FaqContainer">
                             <h1>FREQUENTLY ASKED QUESTIONS</h1>
@@ -37,7 +37,7 @@ function ContentContainer(props) {
                             <p>We focus on novelists, but we also post stories relevant to screenwriters, poets, music writers, and nonfiction writers.</p>
                         </div>
                     </Col>
-                    <SideLinks news_status={props.news_status} updateEmail={props.updateEmail} postData={props.postData} loading={props.loading} posts={props.posts}/>
+                    <SideLinks decodeEntities={props.decodeEntities} news_status={props.news_status} updateEmail={props.updateEmail} postData={props.postData} loading={props.loading} posts={props.posts}/>
                 </Row>
             </Container>
     )

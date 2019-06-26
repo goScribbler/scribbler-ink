@@ -16,8 +16,9 @@ import WriterGifts2 from '../assets/img/writer_gift.png'
 function SideLinks(props) {
 
     let BlogPostsSide = props.posts.slice(0,3).map(post => {
+        let BlogPostTitle = props.decodeEntities(post.title.rendered)
         return (
-            <BlogPostSide key={post.id} slug={post.slug} header_image={post.acf.header_image} title={post.title.rendered} date={post.date}/>
+            <BlogPostSide key={post.id} slug={post.slug} header_image={post.acf.preview_image} title={BlogPostTitle} date={post.date}/>
         )
     })
 

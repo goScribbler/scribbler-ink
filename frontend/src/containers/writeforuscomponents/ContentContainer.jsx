@@ -8,11 +8,11 @@ function ContentContainer(props) {
     return (
         <Container fluid className="ContentContainerPosts">
                 <Row>
-                    <Col className="FaqHero"></Col>
+                    <Col className="WriteForUsHero"></Col>
                 </Row>
                 <Row>
                     <Col md={{offset: '1', size: '7'}}>
-                        <div className="FaqContainer">
+                        <div className="WriteForUsContainer">
                             <h1>WRITE FOR SCRIBBLER, INK.</h1>
                             <h2>WHY WRITE FOR US</h2>
                             <ul>
@@ -74,7 +74,7 @@ function ContentContainer(props) {
                             </ul>
                         </div>
                     </Col>
-                    <SideLinks news_status={props.news_status} updateEmail={props.updateEmail} postData={props.postData} loading={props.loading} posts={props.posts}/>
+                    <SideLinks decodeEntities={props.decodeEntities} news_status={props.news_status} updateEmail={props.updateEmail} postData={props.postData} loading={props.loading} posts={props.posts}/>
                 </Row>
             </Container>
     )

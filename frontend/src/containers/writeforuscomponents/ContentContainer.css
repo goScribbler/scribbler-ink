@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.FaqHero {
+.WriteForUsHero {
     width: 100vw;
     height: 500px;
     background-image: url('../assets/img/writeforushero.png');
@@ -15,20 +15,20 @@
     padding: 0 !important;
 }
 
-.FaqContainer {
+.WriteForUsContainer {
     text-align: left;
     background-color: white;
     padding: 50px !important;
 }
 
-.FaqContainer h1 {
+.WriteForUsContainer h1 {
     font-family: 'Suranna', serif;
     font-size: 5.5rem;
     width: 100%;
     text-align: center;
 }
 
-.FaqContainer h2 {
+.WriteForUsContainer h2 {
     font-family: 'Suranna', serif;
     font-size: 2rem;
     width: 100%;
@@ -36,7 +36,7 @@
     padding: 10px 0;
 }
 
-.FaqContainer li {
+.WriteForUsContainer li {
     padding: 15px;
     font-family: 'Lato', sans-serif;
 }

@@ -26,10 +26,11 @@ class Home extends React.Component {
         this.changePostsPage = this.changePostsPage.bind(this)
         this.postData = this.postData.bind(this)
         this.updateEmail = this.updateEmail.bind(this)
+        this.decodeEntities = this.decodeEntities.bind(this)
     }
 
     componentDidMount() {
-        fetch('http://172.16.16.172:8000/wp-json/wp/v2/posts?per_page=99&filter[orderby]=date')
+        fetch('http://localhost:8000/wp-json/wp/v2/posts?per_page=99&filter[orderby]=date')
         .then(response => response.json())
         .then(data => {
             this.setState({ posts: data }, () => this.setState({ loading: false }))
@@ -82,6 +83,26 @@ class Home extends React.Component {
         setInterval(cycle.bind(this), 5000)
     }
 
+    decodeEntities = (function() {
+        // this prevents any overhead from creating the object each time
+        var element = document.createElement('div');
+      
+        function decodeHTMLEntities (str) {
+          if(str && typeof str === 'string') {
+            // strip script/html tags
+            str = str.replace(/<script[^>]*>([\S\s]*?)<\/script>/gmi, '');
+            str = str.replace(/<\/?\w(?:[^"'>]|"[^"]*"|'[^']*')*>/gmi, '');
+            element.innerHTML = str;
+            str = element.textContent;
+            element.textContent = '';
+          }
+      
+          return str;
+        }
+      
+        return decodeHTMLEntities;
+      })();
+    
     changePostsPage(op) {
         if (op === 1) {
             this.setState({posts_page: 1})
@@ -126,8 +147,8 @@ class Home extends React.Component {
         return (
             <div>
                 <NavbarContainer toggleNavbar={this.toggleNavbar} nav_collapsed={this.state.nav_collapsed}/>
-                <CarouselContainer carousel_index={this.state.carousel_index} posts={this.state.posts} loading={this.state.loading} changeCarouselIndex={this.changeCarouselIndex}/>
-                <ContentContainer news_status={this.state.news_status} updateEmail={this.updateEmail} postData={this.postData} loading={this.state.loading} posts={this.state.posts} posts_page={this.state.posts_page} changePostsPage={this.changePostsPage}/>
+                <CarouselContainer decodeEntities={this.decodeEntities} carousel_index={this.state.carousel_index} posts={this.state.posts} loading={this.state.loading} changeCarouselIndex={this.changeCarouselIndex}/>
+                <ContentContainer decodeEntities={this.decodeEntities} news_status={this.state.news_status} updateEmail={this.updateEmail} postData={this.postData} loading={this.state.loading} posts={this.state.posts} posts_page={this.state.posts_page} changePostsPage={this.changePostsPage}/>
                 <InstagramContainer instagram_posts={this.state.instagram_posts}/>
                 <FooterContainer/>
             </div>

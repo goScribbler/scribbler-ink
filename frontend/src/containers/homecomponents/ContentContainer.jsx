@@ -20,9 +20,11 @@ function ContentContainer(props) {
     if (props.posts_page === 3) BlogPosts = props.posts.slice(24,36)
 
     let BlogPostsBig = BlogPosts.slice(0,4).map(post => {
+        let BlogPostTitle = props.decodeEntities(post.title.rendered)
+
         return (
             <Col key={post.id} md="6">
-                <BlogPostBig slug={post.slug} date={post.date} header_image={post.acf.header_image} title={post.title.rendered} preview={post.acf.post_preview}/>
+                <BlogPostBig slug={post.slug} date={post.date} header_image={post.acf.preview_image} title={BlogPostTitle} preview={post.acf.post_preview}/>
             </Col>
         )
     })
@@ -30,7 +32,7 @@ function ContentContainer(props) {
     let BlogPostsMd = BlogPosts.slice(4,8).map(post => {
         return (
             <Col key={post.id} md="6">
-                <BlogPostMd slug={post.slug} date={post.date} header_image={post.acf.header_image} title={post.title.rendered}/>
+                <BlogPostMd slug={post.slug} date={post.date} header_image={post.acf.preview_image} title={post.title.rendered}/>
             </Col>
         )
     })
@@ -38,7 +40,7 @@ function ContentContainer(props) {
     let BlogPostsSmall = BlogPosts.slice(8,12).map(post => {
         return (
             <Col key={post.id} md="6">
-                <BlogPostSmall slug={post.slug} header_image={post.acf.header_image} title={post.title.rendered}/>
+                <BlogPostSmall slug={post.slug} header_image={post.acf.preview_image} title={post.title.rendered}/>
             </Col>
         )
     })
@@ -85,7 +87,7 @@ function ContentContainer(props) {
                         </Row>
                     </Container>
                 </Col>
-                <SideLinks news_status={props.news_status} updateEmail={props.updateEmail} postData={props.postData} loading={props.loading} posts={props.posts}/>
+                <SideLinks decodeEntities={props.decodeEntities} news_status={props.news_status} updateEmail={props.updateEmail} postData={props.postData} loading={props.loading} posts={props.posts}/>
             </Row>
         </Container>
     )

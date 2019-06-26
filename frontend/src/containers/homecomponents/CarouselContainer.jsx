@@ -4,8 +4,10 @@ import './CarouselContainer.css'
 
 function CarouselContainer(props) {
     if (props.loading === false) {
+        let BlogPostTitle = props.decodeEntities(props.posts[props.carousel_index].title.rendered)
+
         const styles = {
-            backgroundImage: `url(${props.posts[props.carousel_index].acf.header_image})`,
+            backgroundImage: `url(${props.posts[props.carousel_index].acf.carousel_image})`,
             backgroundSize: 'cover',
             backgroundRepeat: 'none',
         }
@@ -15,7 +17,7 @@ function CarouselContainer(props) {
                 <a href={`/post/${props.posts[props.carousel_index].slug}`}>
                     <div className="Slide" style={styles}>
                         <div className="SlideContent">
-                            <div className="SlideTitle">{props.posts[props.carousel_index].title.rendered}</div>
+                            <div className="SlideTitle">{BlogPostTitle}</div>
                             <div className="CarouselIndicators">
                                 <span id="carousel0" onClick={props.changeCarouselIndex.bind(this, 0)}>●</span>
                                 <span id="carousel1" onClick={props.changeCarouselIndex.bind(this, 1)}>○</span>

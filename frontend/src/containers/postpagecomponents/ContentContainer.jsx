@@ -41,8 +41,9 @@ function ContentContainer(props) {
             if (props.prev_post === undefined) {
                 return null
             } else {
+                let PrevPostTitle = props.decodeEntities(props.prev_post.title.rendered)
                 let PrevImage = {
-                    backgroundImage: `url(${props.prev_post.acf.header_image})`,
+                    backgroundImage: `url(${props.prev_post.acf.preview_image})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center center'
                 }
@@ -56,7 +57,7 @@ function ContentContainer(props) {
                                         <div className="BlogPostSideImage" style={PrevImage}></div>
                                     </Col>
                                     <Col className="BlogPostSideTitleContainer">
-                                        <div className="BlogPostSideTitle" style={fontStylePrev}>{props.prev_post.title.rendered}</div>
+                                        <div className="BlogPostSideTitle" style={fontStylePrev}>{PrevPostTitle}</div>
                                     </Col>
                                 </Row>
                             </Container>
@@ -70,8 +71,10 @@ function ContentContainer(props) {
             if (props.next_post === undefined) {
                 return null
             } else {
+                let NextPostTitle = props.decodeEntities(props.next_post.title.rendered)
+
                 let NextImage = {
-                    backgroundImage: `url(${props.next_post.acf.header_image})`,
+                    backgroundImage: `url(${props.next_post.acf.preview_image})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center center'
                 }
@@ -85,7 +88,7 @@ function ContentContainer(props) {
                                         <div className="BlogPostSideImage" style={NextImage}></div>
                                     </Col>
                                     <Col className="BlogPostSideTitleContainer">
-                                        <div className="BlogPostSideTitle" style={fontStyleNext}>{props.next_post.title.rendered}</div>
+                                        <div className="BlogPostSideTitle" style={fontStyleNext}>{NextPostTitle}</div>
                                     </Col>
                                 </Row>
                             </Container>
@@ -147,18 +150,18 @@ function ContentContainer(props) {
             backgroundPosition: 'center center'
         }
 
-        let HeaderImage = {
-            backgroundImage: `url(${props.active_post.acf.header_image})`,
+        let TileImage3 = {
+            backgroundImage: `url(${props.active_post.acf.tile_image3})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center center'
         }
 
-        
+        let BlogPostTitle = props.decodeEntities(props.active_post.title.rendered)
         return (
             <Container fluid className="ContentContainerPosts">
                 <Row>
                     <Col md="9" className="PostTitle">
-                        <h1 style={fontStyleTitle}>{props.active_post.title.rendered}</h1>
+                        <h1 style={fontStyleTitle}>{BlogPostTitle}</h1>
                         <h3 className="PostInfo">By {props.active_post.acf.author_name}, {NewDate}</h3>
                     </Col>
                 </Row>
@@ -170,7 +173,7 @@ function ContentContainer(props) {
                                 <Col className="PostImageSmall"  style={TileImage2}/>
                             </Row>
                             <Row>
-                                <Col className="PostImageLarge" style={HeaderImage}/>
+                                <Col className="PostImageLarge" style={TileImage3}/>
                             </Row>
                             <Row>
                                 <Col md={{size: "10", offset: "1"}} className="PostContent">
@@ -208,7 +211,7 @@ function ContentContainer(props) {
                             </Row>
                         </Container>
                     </Col>
-                    <SideLinks news_status={props.news_status} updateEmail={props.updateEmail} postData={props.postData} loading={props.loading} posts={props.posts}/>
+                    <SideLinks decodeEntities={props.decodeEntities} news_status={props.news_status} updateEmail={props.updateEmail} postData={props.postData} loading={props.loading} posts={props.posts}/>
                 </Row>
             </Container>
         )

@@ -18,6 +18,7 @@ class WriteForUs extends React.Component {
         this.toggleNavbar = this.toggleNavbar.bind(this)
         this.postData = this.postData.bind(this)
         this.updateEmail = this.updateEmail.bind(this)
+        this.decodeEntities = this.decodeEntities.bind(this)
     }
 
     componentDidMount() {
@@ -70,11 +71,31 @@ class WriteForUs extends React.Component {
         console.log(event.target.value)
     }
 
+    decodeEntities = (function() {
+        // this prevents any overhead from creating the object each time
+        var element = document.createElement('div');
+      
+        function decodeHTMLEntities (str) {
+          if(str && typeof str === 'string') {
+            // strip script/html tags
+            str = str.replace(/<script[^>]*>([\S\s]*?)<\/script>/gmi, '');
+            str = str.replace(/<\/?\w(?:[^"'>]|"[^"]*"|'[^']*')*>/gmi, '');
+            element.innerHTML = str;
+            str = element.textContent;
+            element.textContent = '';
+          }
+      
+          return str;
+        }
+      
+        return decodeHTMLEntities;
+      })();
+
     render() {
         return (
             <div>
                 <NavbarContainer toggleNavbar={this.toggleNavbar} nav_collapsed={this.state.nav_collapsed}/>
-                <ContentContainer next_post={this.state.next_post} prev_post={this.state.prev_post} news_status={this.state.news_status} updateEmail={this.updateEmail} postData={this.postData} loading={this.state.loading} posts={this.state.posts} posts_page={this.state.posts_page} changePostsPage={this.changePostsPage} active_post={this.state.active_post}/>
+                <ContentContainer decodeEntities={this.decodeEntities} next_post={this.state.next_post} prev_post={this.state.prev_post} news_status={this.state.news_status} updateEmail={this.updateEmail} postData={this.postData} loading={this.state.loading} posts={this.state.posts} posts_page={this.state.posts_page} changePostsPage={this.changePostsPage} active_post={this.state.active_post}/>
                 <InstagramContainer instagram_posts={this.state.instagram_posts}/>
                 <FooterContainer/>
             </div>

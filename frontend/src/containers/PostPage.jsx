@@ -50,10 +50,11 @@ class PostPage extends React.Component {
         this.updateEmail = this.updateEmail.bind(this)
         this.findNextPost = this.findNextPost.bind(this)
         this.findPrevPost = this.findPrevPost.bind(this)
+        this.decodeEntities = this.decodeEntities.bind(this)
     }
 
     componentDidMount() {
-        fetch('http://localhost:8000/wp-json/wp/v2/posts?orderby=date', { signal: this.abortController.signal })
+        fetch('http://localhost:8000/wp-json/wp/v2/posts?orderby=date')
         .then(response => response.json())
         .then(data => {
             this.setState({ posts: data })
@@ -64,9 +65,8 @@ class PostPage extends React.Component {
                 } else {
                     this.findNextPost(this.state.active_post.date)
                     this.findPrevPost(this.state.active_post.date)
-                    this.setState({loading: false})    
+                    this.setState({loading: false})
                 }
-                
             })
         })
         .catch(error => {
@@ -80,9 +80,25 @@ class PostPage extends React.Component {
         })
     }
 
-    componentWillUnmount = () => this.abortController.abort()
-
-    abortController = new window.AbortController()
+    decodeEntities = (function() {
+        // this prevents any overhead from creating the object each time
+        var element = document.createElement('div');
+      
+        function decodeHTMLEntities (str) {
+          if(str && typeof str === 'string') {
+            // strip script/html tags
+            str = str.replace(/<script[^>]*>([\S\s]*?)<\/script>/gmi, '');
+            str = str.replace(/<\/?\w(?:[^"'>]|"[^"]*"|'[^']*')*>/gmi, '');
+            element.innerHTML = str;
+            str = element.textContent;
+            element.textContent = '';
+          }
+      
+          return str;
+        }
+      
+        return decodeHTMLEntities;
+      })();
 
     toggleNavbar() {
         this.setState({ nav_collapsed: !this.state.nav_collapsed })
@@ -137,7 +153,7 @@ class PostPage extends React.Component {
         return (
             <div>
                 <NavbarContainer toggleNavbar={this.toggleNavbar} nav_collapsed={this.state.nav_collapsed}/>
-                <ContentContainer loading={this.state.loading} next_post={this.state.next_post} prev_post={this.state.prev_post} news_status={this.state.news_status} updateEmail={this.updateEmail} postData={this.postData} loading={this.state.loading} posts={this.state.posts} posts_page={this.state.posts_page} changePostsPage={this.changePostsPage} active_post={this.state.active_post}/>
+                <ContentContainer decodeEntities={this.decodeEntities} loading={this.state.loading} next_post={this.state.next_post} prev_post={this.state.prev_post} news_status={this.state.news_status} updateEmail={this.updateEmail} postData={this.postData} loading={this.state.loading} posts={this.state.posts} posts_page={this.state.posts_page} changePostsPage={this.changePostsPage} active_post={this.state.active_post}/>
                 <InstagramContainer instagram_posts={this.state.instagram_posts}/>
                 <FooterContainer/>
             </div>
