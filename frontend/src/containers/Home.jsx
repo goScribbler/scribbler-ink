@@ -35,7 +35,7 @@ class Home extends React.Component {
         .then(data => {
             this.setState({ posts: data }, () => this.setState({ loading: false }))
         })
-        fetch('https://api.instagram.com/v1/users/self/media/recent/?access_token=6238699054.2f3c5b2.74aa9d9e31824f20b6244ae437d43561')
+        fetch('https://api.instagram.com/v1/users/self/media/recent/?access_token=6238699054.2f3c5b2.ef49cea1c9c44b468affe1d6e7e81892')
         .then(response => response.json())
         .then(data => {
             this.setState({ instagram_posts: data.data}, () => console.log(this.state.instagram_posts))
